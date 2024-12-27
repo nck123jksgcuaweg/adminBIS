@@ -868,7 +868,11 @@
             // Navigation
             const menuLinks = document.querySelectorAll('.sidebar-menu a');
             const sections = document.querySelectorAll('.section');
-
+// Add event listener to logout button
+        document.querySelector('.logout').addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent the default anchor behavior
+            window.location.href = "form.html"; // Redirect to form.html
+        });
             menuLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
